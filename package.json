@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "formik": "^2.2.5",
+    "formik": "^2.2.9",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "^4.0.0"
@@ -25,5 +25,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "MIT MERN Assignment for Week13 - FormikApp",
+  "main": "index.js",
+  "author": "Jheser Guzman",
+  "license": "MIT"
 }
