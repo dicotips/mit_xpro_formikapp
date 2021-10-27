@@ -5,26 +5,25 @@ function App() {
   const formik = useFormik({
     initialValues: {
       emailField: '',
-      passwordField: ''
+      pswField: ''
     },
     onSubmit: values => {
       console.log('form:', values);
     },
     validate: values  => {
       let errors = {};
-      if (!values.emailField) {
-        errors.emailError = "Email is Required";
+      if (values.emailField === "") {
+        errors.emailError = "Field required";
       } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.emailField)) {
         errors.emailError = 'Username should be an email';
       };
-      if (!values.passwordField) {
+      if (!values.pswField) {
         errors.pswError = "Field Required";
-      }
-      if (values.passwordField && values.emailField) {
+      };
+      if (values.pswField && values.emailField) {
         alert("Login Successful");
-      }
+      };
       return errors;
-
      }
   });
 
@@ -43,7 +42,7 @@ function App() {
         ) : null}
         <div>Password</div>
         <input
-          id="passwordField"
+          id="pswField"
           type="password"
           onSubmit={formik.handleChange}
           value={formik.values.pswError}
